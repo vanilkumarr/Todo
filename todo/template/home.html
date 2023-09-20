@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 200px;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 10%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<h1>MyTodoList</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <h1>Title</h1>
+    <input type="text" name="titles" placeholder="title"><br><br>
+    <h2>Content</h2>
+    {%for msg in messages%}
+    {{msg}}
+    {%endfor%}
+    <textarea name="content" rows="5" cols="40" placeholder="Description"></textarea><br><br>
+    <input type="submit" value="add">
+
+</form><br><br><br><br>
+<form method="" action="logout">
+    {% csrf_token %}
+    <input type="submit" value="logout">
+    </form>
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for m in all %}
+        <tr>
+            <td>{{ m.title }}</td>
+            <td>{{ m.content }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
