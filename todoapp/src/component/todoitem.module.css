@@ -1,0 +1,24 @@
+
+.line{
+    border: 1px solid #e1dbdb;
+}
+.item{
+    width: 500px;
+    font-size: 20px;
+    margin:auto
+}
+
+.boldText {
+    font-weight: bold;
+}
+
+.delete{
+    float: right;
+    padding: 8px 11px;
+    border: none;
+    background:rgb(173, 240, 126);
+}
+
+.complete{
+    text-decoration: line-through;
+}

@@ -1,0 +1,43 @@
+.todoform {
+    background-color: beige;
+    
+    padding: 20px;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: 0px 10px 16px rgba(11, 57, 30, 0.32);
+}
+
+.moduleinput {
+    width: 83%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: beige;
+
+    font-size: 16px;
+   
+}
+.moduleinput::placeholder{
+    color: black;
+    font-size: large;
+}
+.moduleinput:focus{
+    outline: none;
+    
+}
+
+
+
+
+.modulebutton {
+    background-color: rgb(173, 240, 126);
+
+    width: 15%;
+    border-radius: 10px;
+    height: 44px;
+    font-size: large;
+}
+.Container{
+    display: flex;
+}
